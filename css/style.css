@@ -19,20 +19,26 @@
 
 header {
     background-color: var(--cor5);
+    height: 70px;
     display: flex;
     flex-direction: row;/* Define a direção se é em linha ou coluna */
-   /*  padding: 0 15px 0 15px; */
+    position: relative;
 }
+
+
+
     
 #header {
     display: flex;
     width: 1500px;
     max-width: 1500px;
     margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo {
-    width: 150px;
+    width: 300px;
     color: black;/* Define a cor da fonte ods textos */
     font-size: 26px;/* Define o tamanho da fonte */
     text-transform: uppercase;/* Colocar em letras maiusculas */
@@ -44,6 +50,21 @@ header {
     width: 60px;
 }
 
+#logo p {
+    margin-left: 10px;
+}
+
+#botao-menu {
+    display: none;
+}
+
+label[for='botao-menu'] {
+    color: black;
+    cursor: pointer;
+    display: none;
+    position: absolute;
+    left: 20px;
+}
 nav {
     display: flex;
     margin-left: auto;
@@ -87,23 +108,89 @@ figure {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 #text-figure-1 {
     border-bottom: 1px solid white;
     padding: 0 25px 0 25px;
+    text-align: center;
 }
+
 #text-figure-2 {
     color: whitesmoke;
     text-transform: uppercase;
     font-size: 72px;
     font-weight: bold;
     margin: 10px 0 10px 0;
-   /*  font-family: Cristo; */
+    text-align: center;
+    font-family: Cristo; 
 }
 
-@media (max-width: 775px) {
+main {
+    position: relative;
+    width: 90%;
+    max-width: 1500px;
+    height: 500px;;
+    margin: 0 auto 50px auto;
+    border: 1px solid black;
+  
+ /*    box-shadow: 3px 3px 10px solid rgb(0, 0, 0, 0.3);  */
+}
+
+/* Posotioon::
+
+Static
+Relative
+Absolute
+Fixed
+
+*/
+
+main > div {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    bottom:50px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    border: 1px solid black;
+}
+
+footer {
+    background-color: #000000;
+    height: 350px;
+}
+
+@media (max-width: 930px) {
     nav {
-        display: none;
+      /*   display: none;  */
     }
+    label[for='botao-menu'] {
+         display: block;
+    }
+    nav {
+        flex-direction: column;
+        position: absolute;
+        width: 90%;
+        top: 100%;
+        margin-top: -200%;
+        transition: all 2s;
+    }
+
+    a {
+        width: 100%;
+        background-color: #d81620;
+
+    }
+
+    label[for='botao-menu'] {
+        display:block ;
+    }
+
+    #botao-menu:checked ~ nav {
+        margin-top: 0%;
+    }
+   
 }
 
 
