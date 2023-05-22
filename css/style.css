@@ -33,7 +33,7 @@ header {
     width: 1500px;
     max-width: 1500px;
     margin: auto;
-    justify-content: center;
+    justify-content:space-between;
     align-items: center;
 }
 
@@ -86,7 +86,7 @@ a {
 a:hover {
     background-color: var(--cor5);
 }
-figure {
+#banner {
     margin: auto;
     width: 100%;
     height: 500px;
@@ -127,15 +127,61 @@ figure {
 
 main {
     position: relative;
+    top: -30px;
     width: 90%;
     max-width: 1500px;
-    height: 500px;;
     margin: 0 auto 50px auto;
-    border: 1px solid black;
+    border-top: 3px solid aqua;
+    box-shadow: 3px 3px 10px black ;
+    background-color: white;
   
  /*    box-shadow: 3px 3px 10px solid rgb(0, 0, 0, 0.3);  */
 }
 
+.main-section {
+    width: 95%;
+    max-width: 95%;
+    margin: 30px auto 40px auto;
+    height: auto;
+    border: 1px solid black;
+    border-top: 3px solid aqua;
+}
+
+.main-section h1 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#serviços{
+    display: flex;
+    justify-content: space-around;
+  /*   border: 1px solid palevioletred; */
+    flex-wrap: wrap;
+}
+#serviços > div {
+ /*    border: 1px solid black; */
+    width: 150px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#serviços img{
+    width: 80px;
+    background-color: aqua;
+    padding: 5px;
+    border-radius: 50%;
+}
+ #serviços div:hover img {
+    background-color: greenyellow;
+ }
+
+ #serviços div:hover figcaption{
+   color:yellowgreen;
+ }
 /* Posotioon::
 
 Static
@@ -145,7 +191,7 @@ Fixed
 
 */
 
-main > div {
+/* main > div {
     position: absolute;
     top: 50px;
     right: 50px;
@@ -154,7 +200,8 @@ main > div {
     height: 100px;
     width: 100px;
     border: 1px solid black;
-}
+} */
+
 
 footer {
     background-color: #000000;
